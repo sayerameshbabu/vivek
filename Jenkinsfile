@@ -1,6 +1,6 @@
 pipeline{
     agent any
-    environemt{
+    environment{
         VAR=9000123
     }
     stages{
