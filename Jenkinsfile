@@ -7,7 +7,7 @@ pipeline{
         string(name: 'VERSION', defaultValue: '1.0', description:'this is the default value for version')
     }
     tools{
-        maven 'Maven'
+        maven 'Maven1'
     }
     stages{
         stage("build"){
