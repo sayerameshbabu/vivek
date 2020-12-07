@@ -25,7 +25,7 @@ pipeline{
         stage("deploy"){
             steps{
                 echo "deploying123.."
-                mvn clean install
+                sh "mvn clean install"
             }
         }
     }
