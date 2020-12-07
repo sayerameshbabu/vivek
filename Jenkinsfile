@@ -1,9 +1,13 @@
 pipeline{
     agent any
+    environemt{
+        VAR=9000123
+    }
     stages{
-        stage("bui"){
+        stage("build"){
             steps{
                 echo "building123.."
+                echo "${VAR}"
             }
         }
         stage("test"){
