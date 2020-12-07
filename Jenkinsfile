@@ -4,7 +4,7 @@ pipeline{
         VAR=9000123
     }
     paramters{
-        string(name: 'VERSION", defaultValue: '1.0', description:'this is the default value for version')
+        string(name: 'VERSION', defaultValue: '1.0', description:'this is the default value for version')
     }
     tools{
         maven 'Maven'
