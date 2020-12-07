@@ -3,7 +3,7 @@ pipeline{
     environment{
         VAR=9000123
     }
-    paramters{
+    parameters{
         string(name: 'VERSION', defaultValue: '1.0', description:'this is the default value for version')
     }
     tools{
