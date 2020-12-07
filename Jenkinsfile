@@ -3,6 +3,12 @@ pipeline{
     environment{
         VAR=9000123
     }
+    paramters{
+        string(name: 'VERSION", defaultValue: '1.0', description:'this is the default value for version')
+    }
+    tools{
+        maven 'Maven'
+    }
     stages{
         stage("build"){
             steps{
@@ -13,11 +19,13 @@ pipeline{
         stage("test"){
             steps{
                 echo "testing123.."
+                echo "${VERSION}"
             }
         }
         stage("deploy"){
             steps{
                 echo "deploying123.."
+                mvn clean install
             }
         }
     }
